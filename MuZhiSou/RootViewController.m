@@ -104,14 +104,13 @@
     }else if (sender.tag == 102){
      
         CustomViewController *customVC = [[CustomViewController alloc] initWithIsQRCode:YES Block:^(NSString *str, BOOL isOK) {
-            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",str]]];
         }];
         customVC.view.backgroundColor = [UIColor whiteColor];
         
         [self presentViewController:customVC animated:YES completion:nil];
     }else if (sender.tag == 100){
-        [UMSocialSnsService presentSnsIconSheetView:self appKey:@"56d4f35867e58e7d82000ee9" shareText:@"" shareImage:[UIImage imageNamed:@"icon.png"] shareToSnsNames:[NSArray arrayWithObjects:UMShareToTencent,UMShareToSina,UMShareToQzone,UMShareToQQ, nil] delegate:nil];
-        
+        [UMSocialSnsService presentSnsIconSheetView:self appKey:@"53290df956240b6b4a0084b3" shareText:@"123123" shareImage:[UIImage imageNamed:@"icon.png"] shareToSnsNames:[NSArray arrayWithObjects:UMShareToTencent,UMShareToSina,UMShareToQzone,UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, nil] delegate:nil];
     }
 }
 @end
