@@ -12,6 +12,7 @@
 #import "SearchViewController.h"
 #import "RQViewController.h"
 #import "CustomViewController.h"
+#import "UMSocial.h"
 
 @interface RootViewController ()
 {
@@ -108,6 +109,9 @@
         customVC.view.backgroundColor = [UIColor whiteColor];
         
         [self presentViewController:customVC animated:YES completion:nil];
+    }else if (sender.tag == 100){
+        [UMSocialSnsService presentSnsIconSheetView:self appKey:@"56d4f35867e58e7d82000ee9" shareText:@"" shareImage:[UIImage imageNamed:@"icon.png"] shareToSnsNames:[NSArray arrayWithObjects:UMShareToTencent,UMShareToSina,UMShareToQzone,UMShareToQQ, nil] delegate:nil];
+        
     }
 }
 @end

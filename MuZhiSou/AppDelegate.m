@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ZMSTabBarController.h"
 #import "RootViewController.h"
+#import "UMSocial.h"
+
 
 @interface AppDelegate ()
 
@@ -18,8 +20,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    ZMSTabBarController *zmsTabBarC = [[ZMSTabBarController alloc] init];
+    // 注册 友盟
+    [UMSocialData setAppKey:@"56d4f35867e58e7d82000ee9"];
+    
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
