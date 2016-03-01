@@ -20,11 +20,24 @@
     [super viewDidLoad];
     self.title = @"指拇搜索";
 
-    // 添加返回和刷新按钮
+    // 添加退出和刷新按钮
     [self addLeftAndRightItem];
     
     // 添加webView
     [self addWebViewToView];
+    
+    // 添加后退按钮
+    [self addBackButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = NO;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)addWebViewToView
@@ -40,17 +53,29 @@
 
 - (void)addLeftAndRightItem
 {
-    UIBarButtonItem *leftButtonLtem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(clickLeftButton)];
-    self.navigationItem.leftBarButtonItem = leftButtonLtem;
+    
+    UIBarButtonItem *stopButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(clickLeftButton)];
+    self.navigationItem.leftBarButtonItem = stopButton;
     
     UIBarButtonItem *rightButtonLtem = [[UIBarButtonItem alloc] initWithTitle:@"刷新" style:UIBarButtonItemStylePlain target:self action:@selector(clickRightButton)];
     self.navigationItem.rightBarButtonItem = rightButtonLtem;
 }
 
+- (void)addBackButton
+{
+    CGFloat backBtnW = 30;
+    CGFloat backBtnH = 30;
+    CGFloat backBtnX = 10;
+    CGFloat backBtnY = self.view.bounds.size.height - backBtnH - 80;
+    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(backBtnX, backBtnY, backBtnW, backBtnH)];
+    [backButton setBackgroundImage:[UIImage imageNamed:@"back_btn"] forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(clickBackButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:backButton];
+}
 
 - (void)clickLeftButton
 {
-    [_webView goBack];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)clickRightButton
@@ -58,4 +83,8 @@
     [_webView reload];
 }
 
+- (void)clickBackButton
+{
+    [_webView goBack];
+}
 @end

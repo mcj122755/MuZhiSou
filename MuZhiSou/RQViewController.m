@@ -7,6 +7,7 @@
 //
 
 #import "RQViewController.h"
+#import "CustomViewController.h"
 
 @interface RQViewController ()
 
@@ -16,22 +17,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    // 1. 添加二维码扫描
+    [self addRQButton];
+    
+    // 2. 添加分享
+    [self addShareButton];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)addRQButton
+{
+    
+    UIButton *qrButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 50)];
+    [qrButton setBackgroundColor:[UIColor lightGrayColor]];
+    [qrButton setTitle:@"扫描二维码" forState:UIControlStateNormal];
+    [qrButton addTarget:self action:@selector(clickQrButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:qrButton];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)addShareButton
+{
+    UIButton *qrButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 300, self.view.bounds.size.width, 50)];
+    [qrButton setBackgroundColor:[UIColor lightGrayColor]];
+    [qrButton setTitle:@"分享给朋友" forState:UIControlStateNormal];
+    [qrButton addTarget:self action:@selector(clickQrButton) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:qrButton];
 }
-*/
+
+- (void)clickQrButton
+{
+    
+    CustomViewController *customVC = [[CustomViewController alloc] initWithIsQRCode:YES Block:^(NSString *str, BOOL isOK) {
+        
+    }];
+    customVC.view.backgroundColor = [UIColor whiteColor];
+    
+    [self presentViewController:customVC animated:YES completion:nil];
+}
 
 @end

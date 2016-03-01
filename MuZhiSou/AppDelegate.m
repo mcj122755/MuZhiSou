@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZMSTabBarController.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,10 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    ZMSTabBarController *zmsTabBarC = [[ZMSTabBarController alloc] init];
+//    ZMSTabBarController *zmsTabBarC = [[ZMSTabBarController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = zmsTabBarC;
+    self.window.rootViewController = navC;
     [self.window makeKeyAndVisible];
     
     return YES;
