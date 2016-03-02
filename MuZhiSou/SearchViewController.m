@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"指拇搜索";
+    self.title = @"拇指搜";
 
     // 添加退出和刷新按钮
     [self addLeftAndRightItem];

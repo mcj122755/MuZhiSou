@@ -24,7 +24,7 @@
     if (self) {
         
         // 1. 引导图片
-        _introduceArray = [[NSArray alloc] initWithObjects:@"intro_01",@"intro_02", @"intro_03",nil];
+        _introduceArray = [[NSArray alloc] initWithObjects:@"intro_1.jpg",@"intro_2.jpg", @"intro_3.jpg",nil];
         
         // 属性
         self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -42,6 +42,7 @@
     //滑动展示图片控件
     UIScrollView *pictureScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     pictureScrollView.pagingEnabled = YES;
+    pictureScrollView.bounces = NO;
     pictureScrollView.backgroundColor = [UIColor clearColor];
     pictureScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*[_introduceArray count], SCREEN_WIDTH);
     pictureScrollView.delegate = self;
@@ -63,9 +64,9 @@
                 enterBut.frame = CGRectMake((320-115)/2*SCREEN_SCALE, SCREEN_HEIGHT-75*SCREEN_SCALE, 115.0f*SCREEN_SCALE, 30*SCREEN_SCALE);
                 
             }
-            [enterBut setBackgroundImage:[UIImage imageNamed:@"btn_start"] forState:UIControlStateNormal];
+//            [enterBut setBackgroundImage:[UIImage imageNamed:@"btn_start"] forState:UIControlStateNormal];
             enterBut.titleLabel.font = [UIFont systemFontOfSize:20];
-            //            [enterBut setTitle:NSLocalizedString(@"立即体验", nil) forState:UIControlStateNormal];
+           [enterBut setTitle:NSLocalizedString(@"立即体验", nil) forState:UIControlStateNormal];
             //            [enterBut setTitle:NSLocalizedString(@"立即体验", nil) forState:UIControlStateHighlighted];
             [enterBut addTarget:self action:@selector(removeIntroduceView) forControlEvents:UIControlEventTouchUpInside];
             [picture addSubview:enterBut];

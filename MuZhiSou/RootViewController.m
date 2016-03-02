@@ -13,6 +13,7 @@
 #import "RQViewController.h"
 #import "CustomViewController.h"
 #import "UMSocial.h"
+#import "PlayViewController.h"
 
 @interface RootViewController ()
 {
@@ -26,14 +27,14 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = YES;
     
-    // 0. 添加引导页
-    [self addIntroduceView];
-    
     // 1. 添加背景图
     [self addBackGroungImage];
     
     // 2. 添加显示的功能
     [self addToolsButtons];
+    
+    // 0. 添加引导页
+    [self addIntroduceView];
 }
 
 
@@ -66,7 +67,7 @@
     [self.view addSubview:_disperseBtn];
     
     // 设置按钮个数
-    [self setDisViewButtonsNum:3];
+    [self setDisViewButtonsNum:4];
     
     [self performSelector:@selector(startTap) withObject:nil afterDelay:0.7];
 }
@@ -111,6 +112,9 @@
         [self presentViewController:customVC animated:YES completion:nil];
     }else if (sender.tag == 100){
         [UMSocialSnsService presentSnsIconSheetView:self appKey:@"53290df956240b6b4a0084b3" shareText:@"123123" shareImage:[UIImage imageNamed:@"icon.png"] shareToSnsNames:[NSArray arrayWithObjects:UMShareToTencent,UMShareToSina,UMShareToQzone,UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, nil] delegate:nil];
+    }else if (sender.tag == 103){
+        PlayViewController *play = [[PlayViewController alloc] init];
+        [self presentViewController:play animated:YES completion:nil];
     }
 }
 @end
