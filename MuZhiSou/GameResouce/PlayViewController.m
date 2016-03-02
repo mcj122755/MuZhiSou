@@ -34,6 +34,7 @@
 @interface PlayViewController ()
 {
     AVAudioPlayer *_audioPlayer;
+    BOOL _boo;
 }
 @end
 
@@ -104,6 +105,24 @@
     
       _audioPlayer.numberOfLoops = -1;
     
+    // 成为摇晃相应
+    // 设置允许摇一摇功能
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
+    // 并让自己成为第一响应者
+    [self becomeFirstResponder];
+    
 }
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+   
+    if (!_boo) {
+        [_audioPlayer pause];
+    }else{
+        [_audioPlayer play];
+    }
+    _boo = !_boo;
+    return;
+}
+
 
 @end

@@ -743,7 +743,7 @@
 			children = (
 				7395E3AE1C86FD76005090CB /* 游戏 */,
 				686468361C50D1DB00FC9B1C /* Other */,
-				686467881C50CDA900FC9B1C /* TabBar */,
+				686467881C50CDA900FC9B1C /* RootView */,
 				6864677E1C50CBE400FC9B1C /* 搞笑模块 */,
 				6864677D1C50CBD600FC9B1C /* 二维码模块 */,
 				6864677C1C50CBC900FC9B1C /* 搜索模块 */,
@@ -829,7 +829,7 @@
 			name = "搞笑模块";
 			sourceTree = "<group>";
 		};
-		686467881C50CDA900FC9B1C /* TabBar */ = {
+		686467881C50CDA900FC9B1C /* RootView */ = {
 			isa = PBXGroup;
 			children = (
 				686467891C50CDE200FC9B1C /* ZMSTabBarController.h */,
@@ -837,7 +837,7 @@
 				7328AD131C84821B0019BC61 /* RootViewController.h */,
 				7328AD141C84821B0019BC61 /* RootViewController.m */,
 			);
-			name = TabBar;
+			name = RootView;
 			sourceTree = "<group>";
 		};
 		6864678C1C50D1A500FC9B1C /* Icon */ = {
