@@ -23,23 +23,42 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    // 注册
+//    //  自己的56d4f35867e58e7d82000ee9  友盟的53290df956240b6b4a0084b3
+//    [UMSocialData setAppKey:@"53290df956240b6b4a0084b3"];
+//    
+//    //    //设置支持没有客户端情况下使用SSO授权
+//    [UMSocialQQHandler setSupportWebView:YES];
+//    
+//    //设置微信AppId，设置分享url，默认使用友盟的网址
+//    [UMSocialWechatHandler setWXAppId:@"wxdc1e388c3822c80b" appSecret:@"a393c1527aaccb95f3a4c88d6d1455f6" url:@"http://www.umeng.com/social"];
+//    
+//    //设置分享到QQ空间的应用Id，和分享url 链接
+//    [UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.umeng.com/social"];
+//    
+//    
+//    // 打开新浪微博的SSO开关
+//    // 将在新浪微博注册的应用appkey、redirectURL替换下面参数，并在info.plist的URL Scheme中相应添加wb+appkey，如"wb3921700954"，详情请参考官方文档。
+//    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"3921700954" secret:@"04b48b094faeb16683c32669824ebdad" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
+    
+
     // 注册
     //  自己的56d4f35867e58e7d82000ee9  友盟的53290df956240b6b4a0084b3
-    [UMSocialData setAppKey:@"53290df956240b6b4a0084b3"];
+    [UMSocialData setAppKey:@"56d4f35867e58e7d82000ee9"];
     
-    //设置微信AppId，设置分享url，默认使用友盟的网址
-    [UMSocialWechatHandler setWXAppId:@"wxdc1e388c3822c80b" appSecret:@"a393c1527aaccb95f3a4c88d6d1455f6" url:@"http://www.umeng.com/social"];
-    
-    //设置分享到QQ空间的应用Id，和分享url 链接
-    [UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.umeng.com/social"];
     //    //设置支持没有客户端情况下使用SSO授权
     [UMSocialQQHandler setSupportWebView:YES];
     
+    //设置微信AppId，设置分享url，默认使用友盟的网址
+    [UMSocialWechatHandler setWXAppId:@"wx10274c2f23f2b4a2" appSecret:@"b0659aec7c7e4a290b9c96054107841f" url:@"http://wap.muzhiso.com"];
+    
+    //设置分享到QQ空间的应用Id，和分享url 链接
+    [UMSocialQQHandler setQQWithAppId:@"1105221006" appKey:@"GxFoz7hPZGgyLliL" url:@"http://wap.muzhiso.com"];
+    
+    
     // 打开新浪微博的SSO开关
     // 将在新浪微博注册的应用appkey、redirectURL替换下面参数，并在info.plist的URL Scheme中相应添加wb+appkey，如"wb3921700954"，详情请参考官方文档。
-    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"3921700954" secret:@"04b48b094faeb16683c32669824ebdad" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
-    
-
+    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"1518972172" secret:@"1cf4a5cd5de3833846b2a8e9cb4929fc" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
