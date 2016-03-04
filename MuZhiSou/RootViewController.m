@@ -111,7 +111,7 @@
         
         [self presentViewController:customVC animated:YES completion:nil];
     }else if (sender.tag == 100){
-        [UMSocialSnsService presentSnsIconSheetView:self appKey:@"53290df956240b6b4a0084b3" shareText:@"123123" shareImage:[UIImage imageNamed:@"icon.png"] shareToSnsNames:[NSArray arrayWithObjects:UMShareToTencent,UMShareToSina,UMShareToQzone,UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, nil] delegate:nil];
+        [UMSocialSnsService presentSnsIconSheetView:self appKey:@"53290df956240b6b4a0084b3" shareText:@"最好用的搜索-拇指搜" shareImage:[UIImage imageNamed:@"icon.png"] shareToSnsNames:[NSArray arrayWithObjects:UMShareToTencent,UMShareToSina,UMShareToQzone,UMShareToQQ,UMShareToWechatTimeline,UMShareToWechatSession, nil] delegate:nil];
     }else if (sender.tag == 103){
         PlayViewController *play = [[PlayViewController alloc] init];
         [self presentViewController:play animated:YES completion:nil];
