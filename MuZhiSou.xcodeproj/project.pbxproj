@@ -96,6 +96,11 @@
 		686468341C50D1A500FC9B1C /* intro_02@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 686467E51C50D1A500FC9B1C /* intro_02@3x.png */; };
 		686468351C50D1A500FC9B1C /* intro_03@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 686467E61C50D1A500FC9B1C /* intro_03@3x.png */; };
 		686468391C50D1E900FC9B1C /* IntroduceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 686468381C50D1E900FC9B1C /* IntroduceView.m */; };
+		7320A5631C92ABBF00809E6C /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7320A5611C92ABBF00809E6C /* jpush-ios-2.1.0.a */; };
+		7320A5651C92B43300809E6C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7320A5641C92B43300809E6C /* CFNetwork.framework */; };
+		7320A5671C92B44A00809E6C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7320A5661C92B44A00809E6C /* CoreFoundation.framework */; };
+		7320A5691C92B47A00809E6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7320A5681C92B47A00809E6C /* UIKit.framework */; };
+		7320A56D1C92BFC000809E6C /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7320A56C1C92BFC000809E6C /* PushConfig.plist */; };
 		7328ACEE1C8472930019BC61 /* CustomViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7328ACB11C8472930019BC61 /* CustomViewController.mm */; };
 		7328ACEF1C8472930019BC61 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 7328ACCA1C8472930019BC61 /* bitstream.c */; };
 		7328ACF01C8472930019BC61 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = 7328ACCC1C8472930019BC61 /* mask.c */; };
@@ -405,6 +410,12 @@
 		686467E61C50D1A500FC9B1C /* intro_03@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "intro_03@3x.png"; sourceTree = "<group>"; };
 		686468371C50D1E900FC9B1C /* IntroduceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroduceView.h; sourceTree = "<group>"; };
 		686468381C50D1E900FC9B1C /* IntroduceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroduceView.m; sourceTree = "<group>"; };
+		7320A5611C92ABBF00809E6C /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		7320A5621C92ABBF00809E6C /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		7320A5641C92B43300809E6C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7320A5661C92B44A00809E6C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7320A5681C92B47A00809E6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7320A56C1C92BFC000809E6C /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
 		7328ACB01C8472930019BC61 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
 		7328ACB11C8472930019BC61 /* CustomViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomViewController.mm; sourceTree = "<group>"; };
 		7328ACB51C8472930019BC61 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
@@ -673,6 +684,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7320A5691C92B47A00809E6C /* UIKit.framework in Frameworks */,
+				7320A5671C92B44A00809E6C /* CoreFoundation.framework in Frameworks */,
+				7320A5651C92B43300809E6C /* CFNetwork.framework in Frameworks */,
 				7395E2541C85B1B8005090CB /* ImageIO.framework in Frameworks */,
 				7395E2511C85A374005090CB /* libz.tbd in Frameworks */,
 				7395E24F1C85A363005090CB /* libstdc++.tbd in Frameworks */,
@@ -681,6 +695,7 @@
 				7395E2491C85A329005090CB /* CoreGraphics.framework in Frameworks */,
 				7328AD121C8473AC0019BC61 /* libiconv.tbd in Frameworks */,
 				7395E2471C85A303005090CB /* Security.framework in Frameworks */,
+				7320A5631C92ABBF00809E6C /* jpush-ios-2.1.0.a in Frameworks */,
 				7395E2391C85A055005090CB /* libWeChatSDK.a in Frameworks */,
 				7395E1DE1C8531CF005090CB /* SystemConfiguration.framework in Frameworks */,
 				7395E2361C85A055005090CB /* TencentOpenAPI.framework in Frameworks */,
@@ -710,6 +725,9 @@
 		686467431C50CA9200FC9B1C = {
 			isa = PBXGroup;
 			children = (
+				7320A5681C92B47A00809E6C /* UIKit.framework */,
+				7320A5661C92B44A00809E6C /* CoreFoundation.framework */,
+				7320A5641C92B43300809E6C /* CFNetwork.framework */,
 				7395E2521C85AFBA005090CB /* ImageIO.framework */,
 				7395E2501C85A374005090CB /* libz.tbd */,
 				7395E24E1C85A363005090CB /* libstdc++.tbd */,
@@ -762,6 +780,7 @@
 			children = (
 				686467501C50CA9200FC9B1C /* Info.plist */,
 				686467511C50CA9200FC9B1C /* main.m */,
+				7320A56C1C92BFC000809E6C /* PushConfig.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1017,6 +1036,7 @@
 		686468361C50D1DB00FC9B1C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				7320A5601C92ABBF00809E6C /* lib */,
 				7395E1E21C85A055005090CB /* umeng_ios_social_sdk_5-2.0_arm64_custom */,
 				7328ACAF1C8472930019BC61 /* ZBarSDK */,
 				7328AD181C8484E70019BC61 /* DisperseBtn.h */,
@@ -1025,6 +1045,15 @@
 				686468381C50D1E900FC9B1C /* IntroduceView.m */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		7320A5601C92ABBF00809E6C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7320A5611C92ABBF00809E6C /* jpush-ios-2.1.0.a */,
+				7320A5621C92ABBF00809E6C /* JPUSHService.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		7328ACAF1C8472930019BC61 /* ZBarSDK */ = {
@@ -1482,6 +1511,11 @@
 					6864674B1C50CA9200FC9B1C = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = R52J8Y4WPA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					686467641C50CA9200FC9B1C = {
 						CreatedOnToolsVersion = 6.3;
@@ -1713,6 +1747,7 @@
 				686468081C50D1A500FC9B1C /* list_icon3@2x.png in Resources */,
 				6864675D1C50CA9200FC9B1C /* Images.xcassets in Resources */,
 				686468241C50D1A500FC9B1C /* list_icon4@3x.png in Resources */,
+				7320A56D1C92BFC000809E6C /* PushConfig.plist in Resources */,
 				7395E4571C86FD86005090CB /* sz20.png in Resources */,
 				686468301C50D1A500FC9B1C /* color4.png in Resources */,
 				686468141C50D1A500FC9B1C /* tab_btn4_sel@2x.png in Resources */,
@@ -1922,7 +1957,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bi hai (M5BYFVQQVK)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1943,11 +1978,12 @@
 					"$(PROJECT_DIR)/MuZhiSou/umeng_ios_social_sdk_5-2.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/SinaSSO",
 					"$(PROJECT_DIR)/MuZhiSou/umeng_ios_social_sdk_5-2.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/MuZhiSou/umeng_ios_social_sdk_5-2.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/Wechat",
+					"$(PROJECT_DIR)/MuZhiSou/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muzhisou.wap.MZS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "04a0448e-029e-4cc2-b94a-d64c30e698ff";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
@@ -1978,11 +2014,12 @@
 					"$(PROJECT_DIR)/MuZhiSou/umeng_ios_social_sdk_5-2.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/SinaSSO",
 					"$(PROJECT_DIR)/MuZhiSou/umeng_ios_social_sdk_5-2.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
 					"$(PROJECT_DIR)/MuZhiSou/umeng_ios_social_sdk_5-2.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/Wechat",
+					"$(PROJECT_DIR)/MuZhiSou/lib",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muzhisou.wap.MZS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "04a0448e-029e-4cc2-b94a-d64c30e698ff";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;
