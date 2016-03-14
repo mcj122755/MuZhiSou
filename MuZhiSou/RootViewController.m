@@ -33,6 +33,11 @@
     // 2. 添加显示的功能
     [self addToolsButtons];
     
+    // 3. 设置开始网页启动
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:searchVC];
+    [self presentViewController:navC animated:NO completion:nil];
+    
     // 0. 添加引导页
     [self addIntroduceView];
 }

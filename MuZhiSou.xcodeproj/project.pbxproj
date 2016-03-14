@@ -298,6 +298,8 @@
 		7395E4AF1C86FD86005090CB /* WonScen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7395E4341C86FD86005090CB /* WonScen.m */; };
 		7395E4B11C86FFAE005090CB /* closeGame.png in Resources */ = {isa = PBXBuildFile; fileRef = 7395E4B01C86FFAE005090CB /* closeGame.png */; };
 		7395E4B51C870BB2005090CB /* 123.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7395E4B41C870BB2005090CB /* 123.mp3 */; };
+		73B400431C968F340061C581 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B400401C968F340061C581 /* NJKWebViewProgress.m */; };
+		73B400441C968F340061C581 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B400421C968F340061C581 /* NJKWebViewProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -677,6 +679,10 @@
 		7395E4341C86FD86005090CB /* WonScen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WonScen.m; sourceTree = "<group>"; };
 		7395E4B01C86FFAE005090CB /* closeGame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeGame.png; sourceTree = "<group>"; };
 		7395E4B41C870BB2005090CB /* 123.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 123.mp3; sourceTree = "<group>"; };
+		73B4003F1C968F340061C581 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		73B400401C968F340061C581 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		73B400411C968F340061C581 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		73B400421C968F340061C581 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -759,6 +765,7 @@
 		6864674E1C50CA9200FC9B1C /* MuZhiSou */ = {
 			isa = PBXGroup;
 			children = (
+				73B4003E1C968F340061C581 /* NJKWebViewProgress */,
 				7395E3AE1C86FD76005090CB /* 游戏 */,
 				686468361C50D1DB00FC9B1C /* Other */,
 				686467881C50CDA900FC9B1C /* RootView */,
@@ -1461,6 +1468,17 @@
 			path = suoyongMonkeyJump;
 			sourceTree = "<group>";
 		};
+		73B4003E1C968F340061C581 /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				73B4003F1C968F340061C581 /* NJKWebViewProgress.h */,
+				73B400401C968F340061C581 /* NJKWebViewProgress.m */,
+				73B400411C968F340061C581 /* NJKWebViewProgressView.h */,
+				73B400421C968F340061C581 /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1531,6 +1549,12 @@
 				en,
 				Base,
 				"zh-Hans",
+				de,
+				es,
+				ja,
+				ko,
+				pl,
+				"zh-Hant",
 			);
 			mainGroup = 686467431C50CA9200FC9B1C;
 			productRefGroup = 6864674D1C50CA9200FC9B1C /* Products */;
@@ -1810,10 +1834,12 @@
 			files = (
 				7328ACF21C8472930019BC61 /* qrencode.c in Sources */,
 				686467811C50CD5300FC9B1C /* JokerViewController.m in Sources */,
+				73B400431C968F340061C581 /* NJKWebViewProgress.m in Sources */,
 				7328ACF31C8472930019BC61 /* qrinput.c in Sources */,
 				7328ACEE1C8472930019BC61 /* CustomViewController.mm in Sources */,
 				7328ACF61C8472930019BC61 /* split.c in Sources */,
 				7395E4351C86FD86005090CB /* GameScene.m in Sources */,
+				73B400441C968F340061C581 /* NJKWebViewProgressView.m in Sources */,
 				7328AD1A1C8484E70019BC61 /* DisperseBtn.m in Sources */,
 				686467551C50CA9200FC9B1C /* AppDelegate.m in Sources */,
 				7395E4AE1C86FD86005090CB /* VolumeValue.m in Sources */,

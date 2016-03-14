@@ -14,6 +14,7 @@
 #import "UMSocialSinaSSOHandler.h"
 #import "UMSocialQQHandler.h"
 #import "JPUSHService.h"
+#import "SearchViewController.h"
 
 //极光推送appkey 43c41056e3dd28596e3f2226
 
@@ -33,7 +34,7 @@
     [self addJiGuangPush:launchOptions];
     
     // 添加
-    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:[[RootViewController alloc] init]];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:[[SearchViewController alloc] init]];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = navC;
@@ -93,10 +94,25 @@
 
 // 接受到远程推送通知之后的回调函数
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
-    
     // IOS 7 Support Required
     [JPUSHService handleRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate
+    // timers, and store enough application state information to restore your
+    // application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called
+    // instead of applicationWillTerminate: when the user quits.
+    
+    //[[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [application setApplicationIconBadgeNumber:0];
+}
 @end
