@@ -300,6 +300,7 @@
 		7395E4B51C870BB2005090CB /* 123.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7395E4B41C870BB2005090CB /* 123.mp3 */; };
 		73B400431C968F340061C581 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B400401C968F340061C581 /* NJKWebViewProgress.m */; };
 		73B400441C968F340061C581 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B400421C968F340061C581 /* NJKWebViewProgressView.m */; };
+		73B400641C96C1990061C581 /* 010.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 73B400631C96C1990061C581 /* 010.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -683,6 +684,7 @@
 		73B400401C968F340061C581 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		73B400411C968F340061C581 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
 		73B400421C968F340061C581 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		73B400631C96C1990061C581 /* 010.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 010.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -812,6 +814,7 @@
 		686467751C50CB4800FC9B1C /* 资源 */ = {
 			isa = PBXGroup;
 			children = (
+				73B400631C96C1990061C581 /* 010.jpg */,
 				7395E4B01C86FFAE005090CB /* closeGame.png */,
 				7395E2611C86D4CF005090CB /* intro */,
 				7395E25F1C86D2FB005090CB /* launch_j.jpg */,
@@ -1751,6 +1754,7 @@
 				7395E4811C86FD86005090CB /* sz3@2x.png in Resources */,
 				686468101C50D1A500FC9B1C /* tab_btn2_sel@2x.png in Resources */,
 				6864682A1C50D1A500FC9B1C /* tab_btn2_nor@3x.png in Resources */,
+				73B400641C96C1990061C581 /* 010.jpg in Resources */,
 				7395E43D1C86FD86005090CB /* nsz3@2x.png in Resources */,
 				7395E44E1C86FD86005090CB /* sz16@2x.png in Resources */,
 				7395E44B1C86FD86005090CB /* sz15.png in Resources */,
@@ -1982,8 +1986,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: bi hai (M5BYFVQQVK)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: bi hai (R52J8Y4WPA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: bi hai (R52J8Y4WPA)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2009,7 +2013,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muzhisou.wap.MZS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04a0448e-029e-4cc2-b94a-d64c30e698ff";
+				PROVISIONING_PROFILE = "a197e08b-0899-47b3-bace-c4b0d78eebbc";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Debug;
@@ -2018,8 +2022,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: bi hai (R52J8Y4WPA)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: bi hai (R52J8Y4WPA)";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2045,7 +2049,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.muzhisou.wap.MZS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "04a0448e-029e-4cc2-b94a-d64c30e698ff";
+				PROVISIONING_PROFILE = "a197e08b-0899-47b3-bace-c4b0d78eebbc";
 				VALID_ARCHS = "armv7 arm64 armv7s";
 			};
 			name = Release;

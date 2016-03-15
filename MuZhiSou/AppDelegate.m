@@ -15,6 +15,7 @@
 #import "UMSocialQQHandler.h"
 #import "JPUSHService.h"
 #import "SearchViewController.h"
+#import "IntroduceView.h"
 
 //极光推送appkey 43c41056e3dd28596e3f2226
 
@@ -39,6 +40,14 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = navC;
     [self.window makeKeyAndVisible];
+    
+    
+    // 添加引导页
+    // 0. 添加引导页
+    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"firstLogin"] isEqualToString:@"YES"]) {
+        IntroduceView *introView = [[IntroduceView alloc] init];
+        [self.window addSubview:introView];
+    }
     
     return YES;
 }

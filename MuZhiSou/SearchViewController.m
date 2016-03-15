@@ -11,6 +11,7 @@
 #import "NJKWebViewProgressView.h"
 #import "CustomViewController.h"
 #import "UMSocial.h"
+#import "IntroduceView.h"
 
 @interface SearchViewController ()<NJKWebViewProgressDelegate,UIWebViewDelegate>
 {
@@ -35,8 +36,17 @@
     // 添加后退按钮
     [self addBackButton];
     
+   
+    
 }
 
+- (void)addIntroduceView
+{
+    if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"firstLogin"] isEqualToString:@"YES"]) {
+        IntroduceView *introView = [[IntroduceView alloc] init];
+        [self.view addSubview:introView];
+    }
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
